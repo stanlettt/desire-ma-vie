@@ -1,16 +1,19 @@
-function yes() {
-    window.location.href = "desire-oui.html";
+function clickfunc(){
+    window.location.href="desire-oui.html"
 }
 
-function no() {
-    const btn = document.querySelector(".non");
-    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+function increaseSize(){
+    const ouiButton = document.querySelector(".oui");
 
-    btn.style.position = "absolute";
-    btn.style.left = x + "px";
-    btn.style.top = y + "px";
+    ouiButton.style.width = (ouiButton.offsetwidth + 70) + 'px';
+    ouiButton.style.height = (ouiButton.offsetHeight + 70) + 'px';
+
+    const currentFontSize = window.getComputedStyle(ouiBoutton).fontSize;
+    const newFontSize = parseInt(currentFontSize) + 20 + 'px';
+    ouiButton.style.fontSize = newFontSize
 }
+
+
 
 
 
