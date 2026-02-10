@@ -1,5 +1,5 @@
 function yes() {
-    window.location.href = "love.html";
+    window.location.href = "Desire-oui.html";
 }
 
 function no() {
@@ -11,4 +11,5 @@ function no() {
     btn.style.left = x + "px";
     btn.style.top = y + "px";
 }
+
 
