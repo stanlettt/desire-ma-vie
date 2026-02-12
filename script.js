@@ -1,21 +1,45 @@
-function clickfunc() {
+
+
+
+
+// Scroll fluide vers la section message
+function scrollToMessage(){
+    const section = document.getElementById("message");
+    if(section){
+        section.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+}
+
+// Affiche l'overlay quand elle clique sur la question
+function showAnswer(){
+
+    // Vérifie si un overlay existe déjà
+    if(document.querySelector(".overlay")) return;
+
+    const overlay = document.createElement("div");
+    overlay.classList.add("overlay");
+
+    overlay.innerHTML = `
+        <div class="overlay-content">
+            <h1>Notre Histoire Commence ❤️</h1>
+            <p>
+                Ce moment marque le début de quelque chose de vrai.
+                Une décision d’écrire ensemble.
+                Chapitre après chapitre.
+            </p>
+            <button onclick="startStory()">Commencer le premier chapitre</button>
+        </div>
+    `;
+
+    document.body.appendChild(overlay);
+}
+
+// Redirection vers la page finale
+function startStory(){
     window.location.href = "desire-oui.html";
 }
-
-function increaseSize() {
-    const ouiButton = document.querySelector(".oui");
-
-    ouiButton.style.width = (ouiButton.offsetWidth + 70) + "px";
-    ouiButton.style.height = (ouiButton.offsetHeight + 70) + "px";
-
-    const currentFontSize = window.getComputedStyle(ouiButton).fontSize;
-    const newFontSize = parseInt(currentFontSize) + 20 + "px";
-    ouiButton.style.fontSize = newFontSize;
-}
-
-
-
-
 
 
 
