@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elle a dit OUI ❤️</title>
+<title>Chapitre 1 — Notre Histoire</title>
 
 <style>
 
@@ -15,86 +15,53 @@
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff4d88,#6a00ff,#1a1a2e);
-    background-size:400% 400%;
-    animation:gradientMove 8s ease infinite;
+    background:linear-gradient(135deg,#0f0f14,#1a1a2e);
     color:white;
-    overflow:hidden;
-    text-align:center;
-}
-
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+    overflow-x:hidden;
 }
 
 .container{
-    max-width:800px;
-    padding:40px;
-    z-index:2;
+    max-width:900px;
+    margin:auto;
+    padding:120px 30px;
+    line-height:1.9;
+    font-size:20px;
 }
 
 h1{
-    font-size:60px;
-    margin-bottom:20px;
-    animation:fadeInDown 1.5s ease forwards;
+    text-align:center;
+    font-size:50px;
+    margin-bottom:80px;
+    color:#ff4d88;
 }
 
-p{
-    font-size:20px;
-    line-height:1.8;
-    margin-bottom:30px;
+.paragraph{
     opacity:0;
-    animation:fadeIn 2s ease forwards;
-    animation-delay:1s;
+    transform:translateY(40px);
+    margin-bottom:40px;
+    transition:1.2s ease;
+}
+
+.paragraph.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.highlight{
+    color:#ff4d88;
+    font-weight:bold;
 }
 
 .signature{
-    margin-top:40px;
-    font-size:18px;
+    text-align:right;
+    margin-top:80px;
+    font-size:22px;
     opacity:0;
-    animation:fadeIn 2s ease forwards;
-    animation-delay:2s;
+    transition:2s ease;
 }
 
-@keyframes fadeIn{
-    from{opacity:0;}
-    to{opacity:1;}
-}
-
-@keyframes fadeInDown{
-    from{
-        opacity:0;
-        transform:translateY(-40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* COEURS FLOTTANTS */
-
-.heart{
-    position:absolute;
-    font-size:20px;
-    animation:floatUp linear infinite;
-}
-
-@keyframes floatUp{
-    0%{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    100%{
-        transform:translateY(-10vh);
-        opacity:0;
-    }
+.signature.visible{
+    opacity:1;
 }
 
 </style>
@@ -103,44 +70,92 @@ p{
 <body>
 
 <div class="container">
-    <h1>DÉSIRÉE A DIT OUI ❤️</h1>
+    <h1>Chapitre 1 — À Toi</h1>
 
-    <p>
-        Aujourd’hui marque le début d’une nouvelle histoire.
-        Pas juste un moment…
-        mais un engagement à écrire quelque chose ensemble.
-    </p>
+    <div class="paragraph">
+        Mon amour,
+    </div>
 
-    <p>
-        Chapitre 1 commence maintenant.
-    </p>
+    <div class="paragraph">
+        Cela fait quatre mois merveilleux que nous sommes ensemble. 
+        Quatre mois où nos nuits se sont entremêlées sans jamais vouloir se quitter. 
+        Quatre mois à nous découvrir, à nous apprivoiser, à nous aimer un peu plus chaque jour.
+    </div>
+
+    <div class="paragraph">
+        Et pourtant au fond de nous, nous le savons : 
+        <span class="highlight">cela fait déjà sept ans que nous nous appartenons.</span>
+        Toi dans ton univers, moi dans le mien.
+        Éloignés, mais reliés par ce fil rouge invisible tendu par le destin.
+    </div>
+
+    <div class="paragraph">
+        Aujourd’hui, comme hier, comme depuis toujours,
+        <span class="highlight">nous ne formons plus qu’un.</span>
+    </div>
+
+    <div class="paragraph">
+        Je connais tes petits tics, ce que tu aimes en silence,
+        ce qui fait briller tes yeux, tes passions, tes rêves.
+        Je connais ton cœur immense, ta sensibilité,
+        tes fous rires qui me désarment.
+    </div>
+
+    <div class="paragraph">
+        Le 2 février, j’ai compris encore un peu plus qui tu es.
+        À quel point tu es sensible.
+        À quel point tu mérites d’être aimé avec passion, douceur et respect.
+    </div>
+
+    <div class="paragraph">
+        Le 3 février, j’ai découvert encore une facette de toi.
+        Tu es capable d’aimer fort.
+        Mais tu es aussi profondément vrai.
+    </div>
+
+    <div class="paragraph">
+        Et hier, je suis tombé amoureux encore une fois.
+        Amoureux de ton intelligence émotionnelle.
+        De ta capacité à comprendre avec le cœur autant qu’avec la raison.
+    </div>
+
+    <div class="paragraph">
+        C’est avec toi que je veux bâtir ma vie.
+        Parce que tu es mon évidence.
+        Parce que je te choisis.
+    </div>
+
+    <div class="paragraph highlight">
+        Je t’aime.
+        Plus que les mots ne pourront jamais le dire.
+    </div>
 
     <div class="signature">
-        — À nous ✨
+        — Pour toujours ❤️
     </div>
 </div>
 
 <script>
 
-// Génération continue de coeurs
-setInterval(() => {
+// Animation apparition au scroll
 
-    const heart = document.createElement("div");
-    heart.classList.add("heart");
-    heart.innerHTML = "❤️";
+const elements = document.querySelectorAll(".paragraph, .signature");
 
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+function revealOnScroll(){
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
 
-    document.body.appendChild(heart);
+        if(position < windowHeight - 100){
+            el.classList.add("visible");
+        }
+    });
+}
 
-    setTimeout(()=>{
-        heart.remove();
-    },6000);
-
-},300);
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
 </script>
 
 </body>
-</ht
+</html>
