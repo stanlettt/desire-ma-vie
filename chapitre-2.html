@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 2 — Un An</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">D.</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="desire-oui.html">Chapitre 1</a>
+    </nav>
+</header>
+
+<div class="letter">
+    <span class="chapter-label">Chapitre 2</span>
+    <h1>Un An</h1>
+    <div class="subhead">La suite que nous avons choisi d'écrire, ensemble.</div>
+
+    <div class="paragraph">
+        Mon amour,
+    </div>
+
+    <div class="paragraph">
+        Il y a un an, je te posais une question. Une seule.
+        Aujourd'hui, un an plus tard, je n'ai qu'une chose à te dire :
+        <span class="highlight">merci d'avoir dit oui.</span>
+    </div>
+
+    <div class="paragraph">
+        Douze mois se sont écoulés, et pourtant j'ai l'impression que chacun d'eux
+        nous a appris un peu plus qui nous sommes, toi et moi. Pas la version
+        parfaite qu'on montre au début, mais la vraie. Celle qui a des matins
+        fatigués, des silences, des doutes parfois — et qui choisit quand même
+        de rester.
+    </div>
+
+    <figure class="polaroid">
+        <img src="assets/portrait.jpg" alt="Désirée, souriante">
+        <figcaption>toujours ce sourire qui change tout</figcaption>
+    </figure>
+
+    <div class="paragraph">
+        J'ai appris la patience à travers toi, et je crois t'en avoir appris un
+        peu aussi. On s'est trompés, on s'est excusés, on a recommencé.
+        <span class="highlight">C'est peut-être ça, aimer vraiment :</span>
+        continuer à choisir l'autre, même les jours où ce serait plus simple de
+        ne pas le faire.
+    </div>
+
+    <div class="paragraph">
+        Loin des jeux et des masques que tout le monde porte autour de nous,
+        on a construit quelque chose de plus tranquille. Un endroit rien qu'à
+        nous, où les mots durs ont fini par laisser place à des mots doux.
+        Où être fatigué, être soi, être maladroit — ce n'est jamais un problème.
+    </div>
+
+    <figure class="polaroid right">
+        <img src="assets/couple2.jpg" alt="Nous deux, un jour ordinaire">
+        <figcaption>nos regards, sans rien à prouver</figcaption>
+    </figure>
+
+    <div class="paragraph">
+        Je me souviens de cette soirée où nos mains se sont trouvées sous la
+        table, dans une lumière presque violette, sans qu'on ait besoin de se
+        le dire. C'est resté l'un de mes souvenirs préférés de cette année :
+        pas un grand discours, juste ta main dans la mienne.
+    </div>
+
+    <div class="video-frame">
+        <video controls playsinline preload="metadata" poster="assets/couple2.jpg">
+            <source src="assets/souvenir.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p style="text-align:center; color:var(--muted); font-size:14px; margin-top:-20px; margin-bottom:40px;">
+        une petite capsule de nous, avant de continuer à lire
+    </p>
+
+    <div class="paragraph">
+        Un an, ce n'est pas une fin de chapitre. C'est juste la preuve que le
+        premier n'était pas un coup de chance. Que ce qu'on a construit tient
+        debout, même face au temps, même face à la distance, même face à nous-mêmes
+        parfois.
+    </div>
+
+    <div class="paragraph highlight">
+        Alors merci d'exister dans ma vie, Désirée.
+        Merci d'être mon évidence, jour après jour.
+        Je t'aime, aujourd'hui encore plus qu'hier.
+    </div>
+
+    <div class="signature">
+        — Bon anniversaire, mon amour. À nous, encore et toujours ❤️
+    </div>
+</div>
+
+<div class="journey">
+    <a href="desire-oui.html" class="journey-step">← Chapitre 1 — 4 mois</a>
+    <span class="journey-sep"></span>
+    <span class="journey-step active"><span class="journey-dot"></span>Chapitre 2 — Un an</span>
+</div>
+
+<footer>
+    Fait avec sincérité ❤️
+</footer>
+
+<script>
+const elements = document.querySelectorAll(".paragraph, .signature, .polaroid");
+
+function revealOnScroll(){
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if(position < windowHeight - 100){
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

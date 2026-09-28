@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 1 — Notre Histoire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">D.</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="chapitre-2.html">Chapitre 2</a>
+    </nav>
+</header>
+
+<div class="letter">
+    <span class="chapter-label">Chapitre 1</span>
+    <h1>À Toi</h1>
+
+    <div class="paragraph">
+        Mon amour,
+    </div>
+
+    <div class="paragraph">
+        Cela fait quatre mois merveilleux que nous sommes ensemble.
+        Quatre mois où nos nuits se sont entremêlées sans jamais vouloir se quitter.
+        Quatre mois à nous découvrir, à nous apprivoiser, à nous aimer un peu plus chaque jour.
+    </div>
+
+    <div class="paragraph">
+        Et pourtant au fond de nous, nous le savons :
+        <span class="highlight">cela fait déjà sept ans que nous nous appartenons.</span>
+        Toi dans ton univers, moi dans le mien.
+        Éloignés, mais reliés par ce fil rouge invisible tendu par le destin.
+    </div>
+
+    <div class="paragraph">
+        Aujourd'hui, comme hier, comme depuis toujours,
+        <span class="highlight">nous ne formons plus qu'un.</span>
+    </div>
+
+    <div class="paragraph">
+        Je connais tes petits tics, ce que tu aimes en silence,
+        ce qui fait briller tes yeux, tes passions, tes rêves.
+        Je connais ton cœur immense, ta sensibilité,
+        tes fous rires qui me désarment.
+    </div>
+
+    <div class="paragraph">
+        Le 2 février, j'ai compris encore un peu plus qui tu es.
+        À quel point tu es sensible.
+        À quel point tu mérites d'être aimé avec passion, douceur et respect.
+    </div>
+
+    <div class="paragraph">
+        Le 3 février, j'ai découvert encore une facette de toi.
+        Tu es capable d'aimer fort.
+        Mais tu es aussi profondément vrai.
+    </div>
+
+    <div class="paragraph">
+        Et hier, je suis tombé amoureux encore une fois.
+        Amoureux de ton intelligence émotionnelle.
+        De ta capacité à comprendre avec le cœur autant qu'avec la raison.
+    </div>
+
+    <div class="paragraph">
+        C'est avec toi que je veux bâtir ma vie.
+        Parce que tu es mon évidence.
+        Parce que je te choisis.
+    </div>
+
+    <div class="paragraph highlight">
+        Je t'aime.
+        Plus que les mots ne pourront jamais le dire.
+    </div>
+
+    <div class="signature">
+        — Pour toujours ❤️
+    </div>
+</div>
+
+<div class="journey">
+    <span class="journey-step active"><span class="journey-dot"></span>Chapitre 1 — 4 mois</span>
+    <span class="journey-sep"></span>
+    <a href="chapitre-2.html" class="journey-step">Chapitre 2 — Un an →</a>
+</div>
+
+<footer>
+    Fait avec sincérité ❤️
+</footer>
+
+<script>
+const elements = document.querySelectorAll(".paragraph, .signature");
+
+function revealOnScroll(){
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if(position < windowHeight - 100){
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>
